@@ -1,0 +1,24 @@
+[core]
+	excludesfile = /Users/guerrix/.gitignore_global
+	editor = atom --wait
+[difftool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Jesus Guerra
+	email = jguerrix@gmail.com
+
+[credential]
+	helper = osxkeychain
+
+[push]
+	default = simple
+
+[pull]
+			default = simple
+
+[alias]
+  logx = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
